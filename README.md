@@ -6,7 +6,7 @@ Inspired by the [web.dev](https://web.dev/blog) blog post _[How to install the T
 
 ## container usage
 
-Use the container directly as published at ghchinoy/thumbor or build and deploy it as per below.
+Use the container directly as published at [ghchinoy/thumbor](https://hub.docker.com/r/ghchinoy/thumbor) or build and deploy it as per below.
 
 ```
 docker run -d -p 8080:8080 -e ALLOW_UNSAFE_URL=True ghchinoy/thumbor
@@ -35,7 +35,7 @@ View build logs at your project name, ex. [thubmor-container](https://console.cl
 
 ```
 # prerequisites
-export PROJECT_ID=thumbor_container
+export PROJECT_ID=thumbor-container
 # create a gcp project
 gcloud projects create $PROJECT_ID
 # enable billing, find via `gcloud alpha billing account list`
@@ -47,11 +47,13 @@ gcloud services enable cloudbuild.googleapis.com
 gcloud builds submit --config cloudbuild.yaml .
 ```
 
-# deploy
+## deploy
 
-One can run the container from Docker hub, as above, or use Cloud Run! 
+One can run the container from Docker hub registry, as above, or use Cloud Run to serve up the container! 
 
-Choose a region and allow unauthenticated access, when asked.
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
+To use Cloud Run from the command line, choose a region and allow unauthenticated access, when asked.
 
 ```
 # enable the API
