@@ -51,7 +51,7 @@ gcloud builds submit --config cloudbuild.yaml .
 
 One can run the container from Docker hub registry, as above, or use Cloud Run to serve up the container! 
 
-[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run?git_repo=https://github.com/ghchinoy/thumbor-container)
 
 To use Cloud Run from the command line, choose a region and allow unauthenticated access, when asked.
 
