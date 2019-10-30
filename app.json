@@ -8,6 +8,7 @@
         },
         "SECURITY_KEY": {
             "description": "Security key, for hmac URLs",
+            "value": "",
             "required": false
         }
     }
