@@ -1,0 +1,14 @@
+{
+    "name": "thumbor",
+    "env": {
+        "ALLOW_UNSAFE_URL": {
+            "description": "Allow unsafe URLs?",
+            "value": "True",
+            "required": true
+        },
+        "SECURITY_KEY": {
+            "description": "Security key, for hmac URLs",
+            "required": false
+        }
+    }
+}

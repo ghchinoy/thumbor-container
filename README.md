@@ -4,6 +4,9 @@
 
 Inspired by the [web.dev](https://web.dev/blog) blog post _[How to install the Thumbor image CDN](https://web.dev/install-thumbor/)_ by Katie Hempenius, this details both the process to put thumbor in a container (even though there are better containers out there, such as [minimalcompact/thumbor](https://hub.docker.com/r/minimalcompact/thumbor)) and how to use Google Cloud Platform to build and host thumbor.
 
+tl;dr: 
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run?git_repo=https://github.com/ghchinoy/thumbor-container)
+
 ## container usage
 
 Use the container directly as published at [ghchinoy/thumbor](https://hub.docker.com/r/ghchinoy/thumbor) or build and deploy it as per below.
@@ -51,9 +54,7 @@ gcloud builds submit --config cloudbuild.yaml .
 
 One can run the container from Docker hub registry, as above, or use Cloud Run to serve up the container! 
 
-[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run?git_repo=https://github.com/ghchinoy/thumbor-container)
-
-To use Cloud Run from the command line, choose a region and allow unauthenticated access, when asked.
+Choose a region and allow unauthenticated access, when asked.
 
 ```
 # enable the API
