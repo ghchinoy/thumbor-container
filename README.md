@@ -54,14 +54,15 @@ gcloud builds submit --config cloudbuild.yaml .
 
 One can run the container from Docker hub registry, as above, or use Cloud Run to serve up the container! 
 
-Choose a region and allow unauthenticated access, when asked.
+Choose a region - as an example `REGION` is set to us-central.
 
 ```
 # enable the API
 gcloud services enable run.googleapis.com
 
 # deploy to cloud run
-gcloud beta run deploy --image gcr.io/$PROJECT_ID/thumbor --platform managed --set-env-vars=ALLOW_UNSAFE_URL=True
+export REGION=us-central1
+gcloud beta run deploy thumbor --image gcr.io/$PROJECT_ID/thumbor --platform managed --set-env-vars=ALLOW_UNSAFE_URL=True --allow-unauthenticated --region ${REGION}
 ```
 
 After this is deployed, you'll see something like the following.
