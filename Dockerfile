@@ -1,4 +1,4 @@
-FROM python:2-buster
+FROM python:3-buster
 
 LABEL maintainer="ghchinoy@gmail.com"
 
@@ -11,7 +11,7 @@ RUN apt-get update -y && apt-get upgrade -y && \
     libjpeg-dev libpng-dev libwebp-dev webp
 
 # install thumbor
-RUN pip install thumbor
+RUN pip install "thumbor==7.0.0a5"
 
 CMD ["thumbor", "--port", "8080"]
 
